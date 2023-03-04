@@ -153,7 +153,7 @@ def make_env(env_id: str, rank: int, seed: int = 0, max_episode_steps=100):
         # the provided place_near_random_ice function which will randomly select an ice tile and place a factory near it.
 
         env = SB3Wrapper(
-            env,
+            env.env,
             factory_placement_policy=place_near_random_ice,
             controller=SimpleUnitDiscreteController(env.env_cfg),
         )
